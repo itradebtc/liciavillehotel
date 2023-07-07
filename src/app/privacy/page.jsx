@@ -7,7 +7,7 @@ export default function page() {
             Effective Date: 24/12/2020 <br />
         </p> <br />
         <p>
-            At Liciaville Hotel, we are committed to protecting the privacy and security of our guests' personal information. This Privacy Policy outlines the types of information we collect, how we use and protect that information, and the choices guests have regarding their information. By using our services and providing your information, you consent to the practices described in this Privacy Policy.
+            At Liciaville Hotel, we are committed to protecting the privacy and security of our guests&#39; personal information. This Privacy Policy outlines the types of information we collect, how we use and protect that information, and the choices guests have regarding their information. By using our services and providing your information, you consent to the practices described in this Privacy Policy.
         </p><br />
         <p>
             Information We Collect:

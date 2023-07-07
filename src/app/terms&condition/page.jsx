@@ -44,7 +44,7 @@ export default function page() {
         </p><br />
         <p>
             3.2 No-Show: <br />
-            If you fail to check-in on the scheduled arrival date without prior notification, it will be considered a "no-show" and may result in the cancellation of the remaining reservation. In such cases, the applicable cancellation fees will apply.
+            If you fail to check-in on the scheduled arrival date without prior notification, it will be considered a &#34;no-show&#34; and may result in the cancellation of the remaining reservation. In such cases, the applicable cancellation fees will apply.
         </p><br />
         <p>
             1. Guest Responsibilities:
@@ -55,7 +55,7 @@ export default function page() {
         </p><br />
         <p>
             4.2 Damages: <br />
-            Guests are liable for any damages caused to the hotel property during their stay, including but not limited to rooms, furniture, fixtures, and equipment. The cost of repair or replacement will be charged to the guest's credit card on file.
+            Guests are liable for any damages caused to the hotel property during their stay, including but not limited to rooms, furniture, fixtures, and equipment. The cost of repair or replacement will be charged to the guest&#39;s credit card on file.
         </p><br />
         <p>
             4.3 Personal Belongings: <br />
