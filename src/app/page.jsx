@@ -71,9 +71,11 @@ export default function Home() {
         
       </div>
 
-      {/* about us */}
+      {/* Rooms */}
       <div>
-
+        <div>
+          <h2>Our Rooms</h2>
+        </div>
       </div>
        <Swiper
         spaceBetween={0}
