@@ -7,8 +7,8 @@ import Link from 'next/link'
 
 export default function Footer() {
   return (
-    <div className='bg-blue-800 text-slate-50'>
-        <div className='flex md:grid md:grid-cols-3 space-x-6 md:space-x-0 justify-between items-center px-7 py-2 md:py-7 md:px-16 w-80 md:w-fit'>
+    <div className='bg-teal-300 text-white'>
+        <div className='flex md:grid md:grid-cols-3 space-x-6 md:space-x-14 justify-between items-center px-7 py-2 md:py-7 md:px-52 w-80 md:w-fit'>
             <Image src={logo} width="200" height="100" alt='Logo' className='col-span-3 w-20 h-24 md:w-52 md:h-56' />
             <div className=''>
                 <div className='md:space-y-1 text-white'>

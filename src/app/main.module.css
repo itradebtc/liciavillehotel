@@ -1,0 +1,16 @@
+@media screen and (max-width: 768px) {
+.welcome {
+    background: url('./images/welcomebg.jpg');
+    height: 50vh;
+    background-size: cover;
+    background-position: center;
+}
+}
+@media screen and (min-width: 769px){
+    .welcome {
+        background: url('./images/welcomebg.jpg');
+        height: 100vh;
+        background-size: cover;
+        background-position: center;
+    }
+}

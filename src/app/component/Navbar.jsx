@@ -16,7 +16,7 @@ export const NavBar = () => {
     }
   return (
     <nav className='shadow-2xl'>
-        <div className='flex justify-between items-center bg-blue-800 py-2 px-7 md:py-3 md:px-16'>
+        <div className='flex justify-between items-center bg-teal-300 py-2 px-7 md:py-3 md:px-16'>
             <div className='flex space-x-4 md:space-x-12 text-slate-50 text-[13px]'>
                 <div className='flex space-x-2 justify-between items-center hover:scale-110'>
                     <a href={`tel:${'(08140815172'}`}><BsFillTelephoneFill size={20} className='text-yellow-600'/></a>
@@ -62,7 +62,7 @@ export const NavBar = () => {
                         <li className='ml-10 uppercase hover:ease-in duration-300 hover:scale-110 hover:text-yellow-600 text-lg'>Home</li>  
                     </Link>
                     <li className='ml-10 uppercase hover:ease-in duration-300 hover:scale-110 hover:text-yellow-600 text-lg'>Rooms</li>
-                    <li className='ml-10 uppercase hover:ease-in duration-300 hover:scale-110 hover:text-yellow-600 text-lg'>About Us</li>
+                    <li className='ml-10 uppercase hover:ease-in duration-300 hover:scale-110 hover:text-yellow-600 text-lg'>Gallery</li>
                     <Link href='./contact'>
                         <li className='ml-10 uppercase hover:ease-in duration-300 hover:scale-110 hover:text-yellow-600 text-lg'>
                                 Contact
@@ -97,7 +97,7 @@ export const NavBar = () => {
                         Rooms
                     </li>
                     <li onClick={() => setMenuOpen(false)} className='py-4 cursor-pointer hover:text-yellow-600'>
-                        About Us
+                        Gallery
                     </li>
                     <Link href='./contact'>
                         <li onClick={() => setMenuOpen(false)} className='py-4 cursor-pointer hover:text-yellow-600'>
