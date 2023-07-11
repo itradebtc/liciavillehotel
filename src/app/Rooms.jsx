@@ -5,7 +5,7 @@ import {BsArrowRightCircleFill} from 'react-icons/bs'
 
 
 async function fetchrooms(){
-    const response = fetch('https://itradebtc.github.io/liciaimages/rooms.json')
+    const response = fetch('https://itradebtc.github.io/liciaimages/therooms.json')
   
     const data = await (await response).json()
   

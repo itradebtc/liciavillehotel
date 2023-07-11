@@ -1,5 +1,9 @@
 "use client"
 import Image from 'next/image'
+import pic from './images/mainswipe1.JPG'
+import pic2 from './images/mainswipe2.JPG'
+import pic3 from './images/mainswipe3.JPG'
+import pic4 from './images/mainswipe4.JPG'
 import styles from './main.module.css'
 import { Modak } from 'next/font/google'
 import React, { useRef, useState } from 'react';
@@ -134,13 +138,13 @@ export default function Home() {
         }}
         navigation={true}
         modules={[Autoplay, Pagination]}
-        className=""
+        className="w-[1131px] h-[40vh]"
       >
-        <SwiperSlide> </SwiperSlide>
-        <SwiperSlide> </SwiperSlide>
-        <SwiperSlide> </SwiperSlide>
-        <SwiperSlide> </SwiperSlide>
-        <SwiperSlide> </SwiperSlide>
+        {/* <SwiperSlide> <Image src={pic} alt='main swipe'  className="w-full h-[100vh]" /> </SwiperSlide>
+        <SwiperSlide> <Image src={pic2} alt='main swipe' className="w-full h-[100vh]" /> </SwiperSlide>
+        <SwiperSlide> <Image src={pic3} alt='main swipe' className="w-full h-full" /> </SwiperSlide>
+        <SwiperSlide> <Image src={pic4} alt='main swipe' className="w-full h-full" /> </SwiperSlide>
+        <SwiperSlide> <Image src={pic} alt='main swipe' width={500} height={500} /> </SwiperSlide> */}
       </Swiper>
 
       <div>
