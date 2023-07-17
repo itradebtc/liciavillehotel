@@ -2,7 +2,7 @@ import React from 'react'
 import Image from 'next/image'
 import logo from '../images/navheader.svg'
 import { FaFacebookF, FaTwitter, FaInstagramSquare } from 'react-icons/fa'
-import { GrSend } from 'react-icons/gr'
+import { FaTelegramPlane } from 'react-icons/fa'
 import Link from 'next/link'
 
 export default function Footer() {
@@ -32,7 +32,7 @@ export default function Footer() {
                 <form className='flex' >
                     <input type="email" placeholder='Enter your email...' className='py-2 px-3 bg-blue-100 rounded-l-md text-sm outline-none'/> 
                     <button className='bg-blue-100 py-2 px-3 rounded-r-lg text-slate-50'>
-                        <GrSend size={25} />
+                        <FaTelegramPlane size={25} className='text-yellow-600' />
                     </button>
                 </form>
             </div>

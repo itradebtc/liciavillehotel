@@ -8,6 +8,7 @@ import { FaFacebookF, FaTwitter, FaInstagramSquare, FaLongArrowAltRight } from '
 import Link from 'next/link'
 import Image from 'next/image'
 import logo from '../images/navheader.svg'
+import Dropdown from '../Dropdown'
 
 export const NavBar = () => {
     const [menuOpen, setMenuOpen] = useState(false)
@@ -61,7 +62,10 @@ export const NavBar = () => {
                     <Link href='./'>
                         <li className='ml-10 uppercase hover:ease-in duration-300 hover:scale-110 hover:text-yellow-600 text-lg'>Home</li>  
                     </Link>
-                    <li className='ml-10 uppercase hover:ease-in duration-300 hover:scale-110 hover:text-yellow-600 text-lg'>Rooms</li>
+                    {/* <li className='ml-10 uppercase hover:ease-in duration-300 hover:scale-110 hover:text-yellow-600 text-lg'>Rooms</li> */}
+                    <li className='ml-10 uppercase hover:ease-in duration-300 hover:scale-110 hover:text-yellow-600 text-lg'>
+                        <Dropdown />
+                    </li>
                     <li className='ml-10 uppercase hover:ease-in duration-300 hover:scale-110 hover:text-yellow-600 text-lg'>Gallery</li>
                     <Link href='./contact'>
                         <li className='ml-10 uppercase hover:ease-in duration-300 hover:scale-110 hover:text-yellow-600 text-lg'>

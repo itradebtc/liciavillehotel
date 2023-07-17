@@ -1,0 +1,22 @@
+[
+    {
+        "id": "1",
+        "room": "Executive Room",
+        "category": "Executive"
+    },
+    {
+        "id": "2",
+        "room": "Exclusive Room",
+        "category": "Exclusive"
+    },
+    {
+        "id": "3",
+        "room": "Luxury Room",
+        "category": "Luxury"
+    },
+    {
+        "id": "4",
+        "room": "Standard Room",
+        "category": "Standard"
+    }
+]
