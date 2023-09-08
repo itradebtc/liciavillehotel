@@ -1,32 +1,29 @@
 "use client"
-import React from 'react'
 import Image from 'next/image'
-import { useState } from 'react'
+import { useState, useRef } from 'react'
 import contactpic2 from '../images/contactpic2.png'
 import { FaFacebookF, FaTwitter, FaInstagramSquare } from 'react-icons/fa'
 import { BsFillTelephoneFill } from 'react-icons/bs'
 import { MdEmail, MdLocationPin } from 'react-icons/md'
 import { PageWrapper } from '../page-wrapper'
+import emailjs from '@emailjs/browser'
+import { ToastContainer, toast } from 'react-toastify'
+import 'react-toastify/dist/ReactToastify.css'
 import { motion } from 'framer-motion'
 
 export default function Page() {
-  const [name, setName] = useState('');
-  const [email, setEmail] = useState('');
-  const [message, setMessage] = useState('');
-  const [response, setResponse] = useState('');
+    const form = useRef();
 
-  const handleSubmit = (event) => {
-    event.preventDefault();
-
-    // You can perform additional validation or data processing here if needed
-
-    // Display the response message
-    setResponse('Thanks for contacting us');
-
-    // Clear the form fields
-    setName('');
-    setEmail('');
-    setMessage('');
+    const sendmail = (e) => {
+      e.preventDefault();
+  
+      emailjs.sendForm("service_k27d4yt","template_yvzib0m",form.current,"1WZjNaK7QEHAfsI_P")
+      .then(()=>{
+        toast.success("message sent")
+      },()=>{
+        toast.error("something is wrong")
+      })
+      e.target.reset()
 
   };
   return (
@@ -45,8 +42,8 @@ export default function Page() {
                     initial={{x: -100, y: 0, opacity: 0 }}
                     animate={{x: 0, y: 0, opacity: 1 }}
                     transition={{duration: 1, delay: 2.5, type: "tween" }}
-                    className='md:rounded-r-[200px] w-full md:w-[1131px] hidden md:flex absolute inset-0' 
-                    src='https://github.com/itradebtc/liciaimages/blob/main/contactpic2.png?raw=true'
+                    className='md:rounded-r-[200px] w-full md:w-[1131px] h-[500px] hidden md:flex absolute inset-0' 
+                    src='https://github.com/itradebtc/liciaimages/blob/main/contactus2.jpg?raw=true'
                     alt='contactus' 
                     width="500" 
                     height="500" 
@@ -55,7 +52,7 @@ export default function Page() {
             <div className='md:space-y-4 w-80 md:w-fit text-[12px] md:text-[14px]'>
                 <h2 className='text-2xl pt-3 md:pt-0'>Contact Us</h2>
                 <p>You have a question? We might just have answers. Send us a message to book an appointment</p>
-                <form action='' className='space-y-4' onSubmit={handleSubmit}>
+                <form id='form' className='space-y-4' ref={form} onSubmit={sendmail}>
                     <div className='flex flex-col'>
                       <label className='py-2'>Name</label>
                       <input type="text" placeholder="Enter your Name"  name="name" className="border-b-2 border-gray-25 outline-none" onChange={(event) => setName(event.target.value)} required />
@@ -68,12 +65,13 @@ export default function Page() {
                       <label>Message</label>
                       <textarea placeholder="Enter your question/comment here" rows="4" cols="50" className="border-b-2 border-gray-25 outline-none h-[123px] pt-2" required ></textarea>
                     </div>
-                    <button className='py-3 px-7 rounded-lg w-full md:w-full text-slate-50 uppercase hover:bg-slate-100 hover:text-yellow-600 text-lg flex justify-center items-center gap-4 bg-yellow-600'>Submit</button>
+                    <button className='py-3 px-7 rounded-lg w-full md:w-full text-slate-50 uppercase hover:bg-slate-300 hover:text-yellow-600 hover:text-xl text-lg flex justify-center items-center gap-4 bg-yellow-600'>Submit</button>
                 </form>
-
-                {response && (
-                <div className='px-1'>{response}</div>
-                )}
+                <ToastContainer
+                position='top-center'
+                hideProgressBar={true}
+                theme='colored'
+                autoClose={2000}/>
 
             </div>
         </div>
@@ -93,18 +91,18 @@ export default function Page() {
                     <div className='py-4 md:py-0'>
                         <div className='space-y-3'>
                             <div className='flex items-center space-x-4 text-[12px] md:text-[14px]'>
-                                <MdLocationPin size={20} className='text-yellow-600 hover:text-slate-100'/>
+                                <MdLocationPin size={20} className='text-yellow-600 hover:text-slate-300'/>
                                 <p>
                                     1 Urubusi street, Agbor, Delta State
                                 </p>
                             </div>
                             <div className='flex items-center space-x-4 text-[12px] md:text-[14px]'>
-                                <a href={`tel:${'(08140815172'}`}><BsFillTelephoneFill size={20} className='text-yellow-600 hover:text-slate-100'/></a>
+                                <a href={`tel:${'(08140815172'}`}><BsFillTelephoneFill size={20} className='text-yellow-600 hover:text-slate-300'/></a>
                                 <a href={`tel:${'(08140815172'}`} >0814 081 5172</a>
                             </div>
                             <div className='flex items-center space-x-4 text-[12px] md:text-[14px]'>
-                                <a href={`mailto:${'liciavillehotel@gmail.com'}`}><MdEmail size={20} className='text-yellow-600 hover:text-slate-100'/></a>
-                                <a href={`mailto:${'liciavillehotel@gmail.com'}`} >liciavillehotel@gmail.com</a>
+                                <a href={`mailto:${'liciavillehotelagbor@gmail.com'}`}><MdEmail size={20} className='text-yellow-600 hover:text-slate-300'/></a>
+                                <a href={`mailto:${'liciavillehotelagbor@gmail.com'}`} >liciavillehotelagbor@gmail.com</a>
                             </div>
                         </div>
                         <div className='pt-7 space-y-3'>
@@ -114,17 +112,17 @@ export default function Page() {
                     
                         <div className='flex pt-4'>
                             <ul className="flex text-yellow-600 gap-7">
-                                <li className='hover:scale-110 hover:ease-in duration-300 hover:text-slate-100'>
+                                <li className='hover:scale-110 hover:ease-in duration-300 hover:text-slate-300'>
                                     <a href="https://web.facebook.com/licia.ville.3/?_rdc=1&_rdr" target='_blank' rel='noreferrer' title='licia.ville.3'>
                                     <FaFacebookF size={30} />
                                     </a> 
                                 </li>
-                                <li className='hover:scale-110 hover:ease-in duration-300 hover:text-slate-100'>
+                                <li className='hover:scale-110 hover:ease-in duration-300 hover:text-slate-300'>
                                     <a href="https://www.twitter.com" target='_blank' rel='noreferrer' title='Our twitter handle'> 
                                     <FaTwitter size={30} />
                                     </a>
                                 </li>
-                                <li className='hover:scale-110 hover:ease-in duration-300 hover:text-slate-100'>
+                                <li className='hover:scale-110 hover:ease-in duration-300 hover:text-slate-300'>
                                     <a href="https://instagram.com/liciavillehotels?igshid=OGIzYTJhMTRmYQ==" target='_blank' rel='noreferrer' title='liciavillehotels'>
                                     <FaInstagramSquare size={30} />
                                     </a>

@@ -17,15 +17,15 @@ export const NavBar = () => {
     }
   return (
     <nav className='shadow-2xl'>
-        <div className='flex justify-between items-center bg-teal-300 py-2 px-7 md:py-3 md:px-16'>
+        <div className='flex justify-between items-center bg-blue-700 py-2 px-7 md:py-3 md:px-16'>
             <div className='flex space-x-4 md:space-x-12 text-slate-50 text-[13px]'>
-                <div className='flex space-x-2 justify-between items-center hover:scale-110'>
+                <div className='flex space-x-2 justify-between items-center'>
                     <a href={`tel:${'(08140815172'}`}><BsFillTelephoneFill size={20} className='text-yellow-600'/></a>
                     <a href={`tel:${'(08140815172'}`} className='hidden md:flex'>0814 081 5172</a>
                 </div>
-                <div className='flex space-x-2 justify-between items-center hover:scale-110'>
+                <div className='flex space-x-2 justify-between items-center'>
                     <a href={`mailto:${'liciavillehotel@gmail.com'}`}><MdEmail size={20} className='text-yellow-600'/></a>
-                    <a href={`mailto:${'liciavillehotel@gmail.com'}`} className='hidden md:flex'>liciavillehotel@gmail.com</a>
+                    <a href={`mailto:${'liciavillehotelagbor@gmail.com'}`} className='hidden md:flex'>liciavillehotelagbor@gmail.com</a>
                 </div>
             </div>
             
@@ -73,7 +73,9 @@ export const NavBar = () => {
                         </li>
                     </Link>
                 </ul>
-                <button className='ml-10 py-2 px-7 text-slate-50 uppercase hover:ease-in duration-300 hover:scale-110 hover:bg-slate-100 hover:text-yellow-600 text-lg flex justify-center items-center gap-4 bg-yellow-600'>Book Now <FaLongArrowAltRight /> </button>
+                <Link href='./booknow'>
+                    <button className='ml-10 py-2 px-7 text-slate-50 uppercase shadow-2xl shadow-slate-700 hover:shadow-none hover:ease-in duration-300 hover:bg-yellow-500 text-lg flex justify-center items-center gap-4 bg-yellow-600'>Book Now <FaLongArrowAltRight /> </button>
+                </Link>
             </div>
             <div onClick={handleNav} className='sm:hidden cursor-pointer pl-24'>
                 <GiHamburgerMenu size={25} className='text-yellow-600' />
@@ -81,9 +83,11 @@ export const NavBar = () => {
         </div>
         <div className={
             menuOpen
-            ? 'fixed left-0 top-0 w-[65%] sm:hidden h-screen bg-[#ecf0f3] p-10 ease-in duration-500'
-            : 'fixed left-[100%] top-0 p-10 ease-in duration-500'
-        }
+            ? 'fixed bottom-0 w-[100%] sm:hidden h-[screen] bg-[#ecf0f3] p-10 ease-in duration-500'
+            : 'fixed bottom-[100%] w-[100%] p-10 ease-in duration-500'
+            // ? 'fixed left-0 top-0 w-[65%] sm:hidden h-screen bg-[#ecf0f3] p-10 ease-in duration-500'
+            // : 'fixed left-[100%] top-0 p-10 ease-in duration-500'
+        }       
         >
             <div className='flex w-full items-center justify-end'>
                 <div onClick={handleNav} className='cursor-pointer'>

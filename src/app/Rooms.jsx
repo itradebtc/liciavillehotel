@@ -26,7 +26,7 @@ async function fetchrooms(){
             ))
           return (
             <div className='pb-12'>
-                <div className='grid md:grid-cols-2 gap-1 justify-center items-center text-black hover:ease-in duration-300'>
+                <div className='grid md:grid-cols-1 gap-1 justify-center items-center text-black hover:ease-in duration-300'>
                     {list}
                 </div>
             </div>

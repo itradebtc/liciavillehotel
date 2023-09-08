@@ -19,7 +19,7 @@ function Dropdown() {
         {isOpen && (
             <div className='bg-[#ecf0f3] absolute top-30 flex flex-col items-start rounded-lg p-3 w-[200px]'>
                 {list.map((item, i) => (
-                    <div className='hover:bg-slate-300 hover:text-yellow-600 text-lg rounded-r-lg border-l-transparent hover:border-l-white border-l-4' 
+                    <div className='hover:bg-slate-300 text-lg rounded-r-lg border-l-transparent hover:border-l-white border-l-4' 
                     key={i}
                     >
                         <Link href={`/rooms/${item.category}`} >

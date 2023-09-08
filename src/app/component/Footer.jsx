@@ -7,13 +7,13 @@ import Link from 'next/link'
 
 export default function Footer() {
   return (
-    <div className='bg-teal-300 text-white'>
+    <div className='bg-blue-700 text-white'>
         <div className='flex md:grid md:grid-cols-3 space-x-6 md:space-x-14 justify-between items-center px-7 py-2 md:py-7 md:px-52 w-80 md:w-fit'>
             <Image src={logo} width="200" height="100" alt='Logo' className='col-span-3 w-20 h-24 md:w-52 md:h-56' />
             <div className=''>
                 <div className='md:space-y-1 text-white'>
                     <p className='text-[12px] md:text-lg hover:text-yellow-600'><a href={`tel:${'08140815172'}`}>0814 081 5172</a></p>
-                    <p className='text-[12px] md:text-[14px] hover:text-yellow-600'><a href={`mailto:${'liciavillehotel@gmail.com'}`}>liciavillehotel@gmail.com</a></p>
+                    <p className='text-[12px] md:text-[14px] hover:text-yellow-600'><a href={`mailto:${'liciavillehotelagbor@gmail.com'}`}>liciavillehotelagbor@gmail.com</a></p>
                     <p className='text-[12px] md:text-[14px] hover:text-yellow-600'>1 Urubusi street, Agbor, Delta State</p>
                 </div>
             </div>
