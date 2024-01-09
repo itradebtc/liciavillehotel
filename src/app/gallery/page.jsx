@@ -57,24 +57,24 @@ export default function Page() {
 
         <div className={styles.grid}>
           {images.map((image, index) => (
-            <div key={index} className={styles.imageContainer}>
-              <image
+            <section key={index} className={styles.imageContainer}>
+              <img
                 src={image}
                 alt={`Hotel Image ${index + 1}`}
                 onClick={() => handleImageClick(image)}
               />
-            </div>
+            </section>
           ))}
         </div>
 
         {selectedImage && (
           <div className={styles.modalOverlay} onClick={handleCloseModal}>
-            <div className={styles.modal}>
+            <section className={styles.modal}>
               <span className={styles.close} onClick={handleCloseModal}>
                 &times;
               </span>
-              <image src={selectedImage} alt="Enlarged" />
-            </div>
+              <img src={selectedImage} alt="Enlarged" />
+            </section>
           </div>
         )}
       </main>

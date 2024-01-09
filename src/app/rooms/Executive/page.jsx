@@ -1,6 +1,6 @@
 import React from 'react'
 import Image from 'next/image'
-import pic from '/Users/user/Desktop/uosy/liciaville-hotel/src/app/images/executive.jpg'
+import pic from '../images/executive.jpg'
 
 export default function page() {
   return (
