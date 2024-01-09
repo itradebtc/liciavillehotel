@@ -38,7 +38,7 @@ const images = [
   // Add more image paths here
 ];
 
-export default function page() {
+export default function Page() {
   const [selectedImage, setSelectedImage] = useState(null);
 
   const handleImageClick = (image) => {
@@ -58,7 +58,7 @@ export default function page() {
         <div className={styles.grid}>
           {images.map((image, index) => (
             <div key={index} className={styles.imageContainer}>
-              <img
+              <image
                 src={image}
                 alt={`Hotel Image ${index + 1}`}
                 onClick={() => handleImageClick(image)}
@@ -73,7 +73,7 @@ export default function page() {
               <span className={styles.close} onClick={handleCloseModal}>
                 &times;
               </span>
-              <img src={selectedImage} alt="Enlarged" />
+              <image src={selectedImage} alt="Enlarged" />
             </div>
           </div>
         )}
