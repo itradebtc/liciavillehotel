@@ -27,7 +27,7 @@ export default function Booking() {
 
   };
   return (
-    <div className='py-2 md:py-0 bg-[url(./images/contact.png)] bg-center bg-cover items-center'>
+    <div className='py-2 md:py-0 bg-[url(./images/contact.png)] bg-center bg-contain items-center'>
         <div className='space-y-3 px-3 md:py-9 md:px-36 md:mx-36 md:space-y-7'>
             <h3 className={`${mod.className} text-3xl md:text-7xl text-center text-blue-700`}>Reservation Booking</h3>
             <div className='w-full md:w-[40vw] bg-transparent border-hidden md:border-solid border-4 border-blue-500 rounded-md md:mx-36'>

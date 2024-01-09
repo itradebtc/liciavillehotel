@@ -138,41 +138,53 @@ export default function Home() {
         className="w-[1131px] h-[700px] py-3"
       >
         <SwiperSlide>
-          <div className='md:flex gap-7 border-4 border-slate-300 rounded-b-xl '>
-            <Image src={pic} width={700} height={700} alt='main swipe' className='contain rounded-b-md' /> 
-            <div className='flex flex-col text-black space-y-4 md:p-7'>
-              <h2 className='text-2xl uppercase'>Executive Room</h2>
-              <p className='text-xl'>₦17,000 / per night</p>
-              <p>The modern and light interior provides you with a comfortable atmosphere and each Superior Room contains complementary toiletries, deluxe bath towels, hair dryer, cosy bedding and a private safe.</p>
+          <Link href='/rooms/Executive'>
+            <div className='md:flex gap-7 border-4 border-slate-300 rounded-b-xl '>
+              <Image src={pic} width={700} height={700} alt='main swipe' className='contain rounded-b-md' /> 
+              <div className='flex flex-col text-black space-y-4 md:m-7 md:pt-12'>
+                <h2 className='text-2xl uppercase'>Executive Room</h2>
+                <p className='text-xl'>₦17,000 / per night</p>
+                <p>The modern and light interior provides you with a comfortable atmosphere and each Executive Room contains complementary toiletries, deluxe bath towels, hair dryer, cosy bedding and a private safe.</p>
+              </div>
             </div>
-          </div>
+          </Link>
         </SwiperSlide>
         <SwiperSlide> 
+        <Link href='/rooms/Exclusive'>
           <div className='md:flex gap-7 border-4 border-slate-300 rounded-b-xl '>
-          <Image src={pic2} width={700} height={700} alt='main swipe' className='contain rounded-b-md'  />
-          <div className='flex flex-col text-black space-y-4 pt-7'>
-              <h2 className='text-2xl uppercase'>Exclusive Room</h2>
-              <p className='text-xl'>₦15,000 / per night</p>
-          </div> 
+            <Image src={pic2} width={700} height={700} alt='main swipe' className='contain rounded-b-md'  />
+            <div className='flex flex-col text-black space-y-4 md:m-7 md:pt-12'>
+                <h2 className='text-2xl uppercase'>Exclusive Room</h2>
+                <p className='text-xl'>₦15,000 / per night</p>
+                <p>The modern and light interior provides you with a comfortable atmosphere and each Exclusive Room contains complementary toiletries, deluxe bath towels and a cosy bedding.</p>
+            </div> 
           </div>
+        </Link>
         </SwiperSlide>
         <SwiperSlide>
-        <div className='md:flex gap-7 border-4 border-slate-300 rounded-b-xl '>
-          <Image src={pic3} width={700} alt='main swipe' className='contain rounded-b-md' /> 
-          <div className='flex flex-col text-black space-y-4 pt-7'>
-              <h2 className='text-2xl uppercase'>Luxury Room</h2>
-              <p className='text-xl'>₦13,000 / per night</p>
+        <Link href='/rooms/Luxury'>
+          <div className='md:flex gap-7 border-4 border-slate-300 rounded-b-xl '>
+            <Image src={pic3} width={700} alt='main swipe' className='contain rounded-b-md' /> 
+            <div className='flex flex-col text-black space-y-4 md:m-7 md:pt-12'>
+                <h2 className='text-2xl uppercase'>Luxury Room</h2>
+                <p className='text-xl'>₦13,000 / per night</p>
+                <p>The modern and light interior provides you with a comfortable atmosphere and each Luxury Room contains complementary toiletries, deluxe bath towels and a cosy bedding.</p>
+            </div>
           </div>
-        </div> 
+        </Link>
         </SwiperSlide>
         <SwiperSlide> 
-        <div className='md:flex gap-7 border-4 border-slate-300 rounded-b-xl '>
-          <Image src={pic4} width={700} alt='main swipe' className='contain rounded-b-md'  /> 
-          <div className='flex flex-col text-black space-y-4 pt-7'>
-              <h2 className='text-2xl uppercase'>Standard Room</h2>
-              <p className='text-xl'>₦12,000 / per night</p>
-          </div>
+          <Link href='/rooms/Standard' >
+            <div className='md:flex gap-7 border-4 border-slate-300 rounded-b-xl '>
+            <Image src={pic4} width={700} alt='main swipe' className='contain rounded-b-md'  /> 
+            <div className='flex flex-col text-black space-y-4 md:m-7 md:pt-12'>
+                <h2 className='text-2xl uppercase'>Standard Room</h2>
+                <p className='text-xl'>₦12,000 / per night</p>
+                <p>The modern and light interior provides you with a comfortable atmosphere and each Standard Room contains complementary toiletries, deluxe bath towels and a cosy bedding.</p>
+            </div>
         </div>
+          </Link>
+        
           {/* <Rooms /> */}
         </SwiperSlide>
       </Swiper>
@@ -190,8 +202,8 @@ export default function Home() {
           </div>
           <div className="flex flex-col md:flex md:h-96 md:w-screen md:float-right">
               <Image src={f1} alt='f1' className="z-50 relative md:absolute transform -translate-y-44 translate-x-44 w-64 h-64" />
-              <Image src={f3} alt='f3' className="z-20 relative md:absolute transform translate-y-44 translate-x-44 w-64 h-64" />
-              <Image src={f6} alt='f2' className="z-40 relative md:absolute transform w-64 h-64" />
+              <Image src={f6} alt='f6' className="z-20 relative md:absolute transform translate-y-44 translate-x-44 w-64 h-64" />
+              <Image src={f3} alt='f3' className="z-40 relative md:absolute transform w-64 h-64" />
           </div>
         </div>
       </div>

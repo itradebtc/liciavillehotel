@@ -66,7 +66,9 @@ export const NavBar = () => {
                     <li className='ml-10 uppercase hover:ease-in duration-300 hover:scale-110 hover:text-yellow-600 text-lg'>
                         <Dropdown />
                     </li>
-                    <li className='ml-10 uppercase hover:ease-in duration-300 hover:scale-110 hover:text-yellow-600 text-lg'>Gallery</li>
+                    <Link href='./gallery'>
+                        <li className='ml-10 uppercase hover:ease-in duration-300 hover:scale-110 hover:text-yellow-600 text-lg'>Gallery</li>
+                    </Link>
                     <Link href='./contact'>
                         <li className='ml-10 uppercase hover:ease-in duration-300 hover:scale-110 hover:text-yellow-600 text-lg'>
                                 Contact
@@ -104,9 +106,11 @@ export const NavBar = () => {
                     <li onClick={() => setMenuOpen(false)} className='py-4 cursor-pointer hover:text-yellow-600'>
                         Rooms
                     </li>
-                    <li onClick={() => setMenuOpen(false)} className='py-4 cursor-pointer hover:text-yellow-600'>
-                        Gallery
-                    </li>
+                    <Link href='./gallery'>
+                        <li onClick={() => setMenuOpen(false)} className='py-4 cursor-pointer hover:text-yellow-600'>
+                            Gallery
+                        </li>
+                    </Link>
                     <Link href='./contact'>
                         <li onClick={() => setMenuOpen(false)} className='py-4 cursor-pointer hover:text-yellow-600'>
                             Contact
