@@ -63,9 +63,11 @@ export const NavBar = () => {
                         <li className='ml-10 uppercase hover:ease-in duration-300 hover:scale-110 hover:text-yellow-600 text-lg'>Home</li>  
                     </Link>
                     {/* <li className='ml-10 uppercase hover:ease-in duration-300 hover:scale-110 hover:text-yellow-600 text-lg'>Rooms</li> */}
-                    <li className='ml-10 uppercase hover:ease-in duration-300 hover:scale-110 hover:text-yellow-600 text-lg'>
-                        <Dropdown />
-                    </li>
+                    <Link href=''>
+                        <li className='ml-10 uppercase hover:ease-in duration-300 hover:scale-110 hover:text-yellow-600 text-lg'>
+                            <Dropdown />
+                        </li>
+                    </Link>
                     <Link href='./gallery'>
                         <li className='ml-10 uppercase hover:ease-in duration-300 hover:scale-110 hover:text-yellow-600 text-lg'>Gallery</li>
                     </Link>

@@ -1,7 +1,5 @@
 "use client"
-import Image from 'next/image';
 import styles from '../gallery/Home.module.css';
-import Link from 'next/link';
 import { useState } from 'react';
 
 const images = [
@@ -56,11 +54,11 @@ export default function Page() {
         <h1 className={styles.title}>Hotel Gallery</h1>
 
         <div className={styles.grid}>
-          {images.map((image, index) => (
-            <section key={index} className={styles.imageContainer}>
+          {images.map((image, i) => (
+            <section key={i} className={styles.imageContainer}>
               <img
                 src={image}
-                alt={`Hotel Image ${index + 1}`}
+                alt={`Hotel Image ${i + 1}`}
                 onClick={() => handleImageClick(image)}
               />
             </section>

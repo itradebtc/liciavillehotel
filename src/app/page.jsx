@@ -7,6 +7,7 @@ import pic4 from './images/standard.jpg'
 import f1 from './images/f1.png'
 import f3 from './images/f3.JPG'
 import f6 from './images/f6.JPG'
+import mainswipe2 from './images/mainswipe2.JPG'
 import styles from './main.module.css'
 import { Modak } from 'next/font/google'
 import React, { useRef } from 'react';
@@ -43,7 +44,7 @@ export default function Home() {
   };
 
   return (
-    <main className='w-screen'>
+    <main className='max-w-screen'>
         <div className={`${styles.welcome} ${mod.className} text-white md:text-6xl text-center py-32 md:py-64 md:space-y-2`}>
         <AnimatePresence>
             <motion.div
@@ -79,29 +80,29 @@ export default function Home() {
     
 
       {/* book now */}
-      <form ref={form} onSubmit={sendmail} className='grid grid-cols-2 grid-rows-2 md:flex justify-around items-center md:border md:rounded-xl md:w-[1131px] h-[296px] md:h-[150px] md:relative md:bottom-14 bg-slate-50 md:ml-36 px-5 py-3 gap-2'>
+      <form ref={form} onSubmit={sendmail} className='flex flex-wrap justify-evenly md:flex md:justify-around md:items-center md:border md:rounded-xl md:w-[1131px] h-[296px] md:h-[150px] md:relative md:bottom-14 bg-slate-50 md:ml-36 px-5 py-3 gap-2'>
         <div className=''>
           <label className='grid text-sm md:text-lg'>
             Check In
-            <input type="date" className='border py-2 px-6 text-slate-500 text-sm outline-none rounded-md' onChange={(event) => setName(event.target.value)}/>
+            <input type="date" className='border py-2 px-6 text-slate-500 text-sm outline-none rounded-md' onChange={(e) => setName(e.target.value)}/>
           </label>
         </div>
         <div>
           <label className='grid text-sm md:text-lg'>
               Check Out
-              <input type="date" className='border py-2 px-6 text-slate-500 text-sm outline-none rounded-md' onChange={(event) => setName(event.target.value)}/>
+              <input type="date" className='border py-2 px-6 text-slate-500 text-sm outline-none rounded-md' onChange={(e) => setName(e.target.value)}/>
           </label>
         </div>
         <div>
           <label className='grid text-sm md:text-lg'>
             Rooms
-            <input type="number" placeholder="Rooms" name='room' min={1} className='border py-2 px-6 text-slate-500 text-sm outline-none rounded-md' onChange={(event) => setRooms(event.target.value)} required />
+            <input type="number" placeholder="Rooms" name='room' min={1} className='border py-2 px-6 text-slate-500 text-sm outline-none rounded-md' onChange={(e) => setRooms(e.target.value)} required />
           </label>
         </div>
         <div className='px-3 md:px-0'>
           <label className='grid text-sm md:text-lg'>
             Adults
-            <input type="number" placeholder="Adults" name='adults' min={1} className='border py-2 px-6 text-slate-500 text-sm outline-none rounded-md' onChange={(event) => setAdults(event.target.value)} required />
+            <input type="number" placeholder="Adults" name='adults' min={1} className='border py-2 px-6 text-slate-500 text-sm outline-none rounded-md' onChange={(e) => setAdults(e.target.value)} required />
           </label>
         </div>
         <div className='md:pt-[29px] md:flex col-span-3'>
@@ -135,11 +136,11 @@ export default function Home() {
         }}
         navigation={true}
         modules={[Autoplay, Pagination]}
-        className="w-[1131px] h-[700px] py-3"
+        className="md:w-[1131px] md:h-[700px] md:py-3"
       >
         <SwiperSlide>
           <Link href='/rooms/Executive'>
-            <div className='md:flex gap-7 border-4 border-slate-300 rounded-b-xl '>
+            <div className='md:flex gap-7 md:border-4 md:border-slate-300 rounded-b-xl '>
               <Image src={pic} width={700} height={700} alt='main swipe' className='contain rounded-b-md' /> 
               <div className='flex flex-col text-black space-y-4 md:m-7 md:pt-12'>
                 <h2 className='text-2xl uppercase'>Executive Room</h2>
@@ -151,7 +152,7 @@ export default function Home() {
         </SwiperSlide>
         <SwiperSlide> 
         <Link href='/rooms/Exclusive'>
-          <div className='md:flex gap-7 border-4 border-slate-300 rounded-b-xl '>
+          <div className='md:flex gap-7 md:border-4 md:border-slate-300 rounded-b-xl '>
             <Image src={pic2} width={700} height={700} alt='main swipe' className='contain rounded-b-md'  />
             <div className='flex flex-col text-black space-y-4 md:m-7 md:pt-12'>
                 <h2 className='text-2xl uppercase'>Exclusive Room</h2>
@@ -163,7 +164,7 @@ export default function Home() {
         </SwiperSlide>
         <SwiperSlide>
         <Link href='/rooms/Luxury'>
-          <div className='md:flex gap-7 border-4 border-slate-300 rounded-b-xl '>
+          <div className='md:flex gap-7 md:border-4 md:border-slate-300 rounded-b-xl '>
             <Image src={pic3} width={700} alt='main swipe' className='contain rounded-b-md' /> 
             <div className='flex flex-col text-black space-y-4 md:m-7 md:pt-12'>
                 <h2 className='text-2xl uppercase'>Luxury Room</h2>
@@ -175,7 +176,7 @@ export default function Home() {
         </SwiperSlide>
         <SwiperSlide> 
           <Link href='/rooms/Standard' >
-            <div className='md:flex gap-7 border-4 border-slate-300 rounded-b-xl '>
+            <div className='md:flex gap-7 md:border-4 md:border-slate-300 rounded-b-xl '>
             <Image src={pic4} width={700} alt='main swipe' className='contain rounded-b-md'  /> 
             <div className='flex flex-col text-black space-y-4 md:m-7 md:pt-12'>
                 <h2 className='text-2xl uppercase'>Standard Room</h2>
@@ -196,14 +197,20 @@ export default function Home() {
           <h2 className='text-center text-5xl py-4 uppercase'>Our Facilities</h2>
           <p className='text-center border-t-4 border-yellow-600 md:mx-[500px] py-7'></p>
         </div>
-        <div className='flex'>
+        <div className='md:flex'>
           <div>
             <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatem, in omnis qui laudantium sed quasi cum modi atque eum reiciendis dolor sunt beatae, quibusdam aliquid? Harum magni in neque qui!</p>
           </div>
-          <div className="flex flex-col md:flex md:h-96 md:w-screen md:float-right">
-              <Image src={f1} alt='f1' className="z-50 relative md:absolute transform -translate-y-44 translate-x-44 w-64 h-64" />
-              <Image src={f6} alt='f6' className="z-20 relative md:absolute transform translate-y-44 translate-x-44 w-64 h-64" />
-              <Image src={f3} alt='f3' className="z-40 relative md:absolute transform w-64 h-64" />
+          <div className="hidden md:flex-col md:flex md:h-96 md:w-screen md:float-right">
+              <Image src={f1} alt='f1' className="z-50 md:absolute md:transform md:-translate-y-44 md:translate-x-44 md:w-56 md:h-56" />
+              <Image src={f6} alt='f6' className="z-20 md:absolute md:transform md:translate-y-44 md:translate-x-44 md:w-56 md:h-56" />
+              <Image src={f3} alt='f3' className="z-40 md:absolute md:transform md:w-56 md:h-56" />
+              <Image src={mainswipe2} alt='ms2' className="z-20 md:absolute md:transform md:translate-y-5 md:translate-x-72 md:w-56 md:h-56" />
+          </div>
+          <div className="md:hidden flex flex-col md:h-96 md:w-screen md:float-right">
+              <Image src={f1} alt='f1' className="z-50 transform translate-y-8 translate-x-80 w-40 h-40" />
+              <Image src={f6} alt='f6' className="z-20 transform translate-y-32 translate-x-14 w-40 h-40" />
+              <Image src={f3} alt='f3' className="z-40 transform -translate-y-40 translate-x-48 w-40 h-40" />
           </div>
         </div>
       </div>
