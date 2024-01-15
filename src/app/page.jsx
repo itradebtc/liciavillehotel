@@ -45,7 +45,7 @@ export default function Home() {
   };
 
   return (
-    <main className='max-w-screen'>
+    <main className='w-screen'>
         <div className={`${styles.welcome} ${mod.className} text-white md:text-6xl text-center py-32 md:py-64 md:space-y-2`}>
         <AnimatePresence>
             <motion.div
