@@ -4,6 +4,7 @@ import pic from './images/executive.jpg'
 import pic2 from './images/exclusive.jpg'
 import pic3 from './images/luxury.jpg'
 import pic4 from './images/standard.jpg'
+import pic5 from './images/liciaville.png'
 import f1 from './images/f1.png'
 import f3 from './images/f3.JPG'
 import f6 from './images/f6.JPG'
@@ -202,15 +203,16 @@ export default function Home() {
             <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatem, in omnis qui laudantium sed quasi cum modi atque eum reiciendis dolor sunt beatae, quibusdam aliquid? Harum magni in neque qui!</p>
           </div>
           <div className="hidden md:flex-col md:flex md:h-96 md:w-screen md:float-right">
-              <Image src={f1} alt='f1' className="z-50 md:absolute md:transform md:-translate-y-44 md:translate-x-44 md:w-56 md:h-56" />
+              <Image src={f1} alt='f1' className="z-40 md:absolute md:transform md:-translate-y-44 md:translate-x-44 md:w-56 md:h-56" />
               <Image src={f6} alt='f6' className="z-20 md:absolute md:transform md:translate-y-44 md:translate-x-44 md:w-56 md:h-56" />
               <Image src={f3} alt='f3' className="z-40 md:absolute md:transform md:w-56 md:h-56" />
               <Image src={mainswipe2} alt='ms2' className="z-20 md:absolute md:transform md:translate-y-5 md:translate-x-72 md:w-56 md:h-56" />
           </div>
           <div className="md:hidden flex flex-col md:h-96 md:w-screen md:float-right">
-              <Image src={f1} alt='f1' className="z-50 transform translate-y-8 translate-x-80 w-40 h-40" />
+              {/* <Image src={f1} alt='f1' className="z-50 transform translate-y-8 translate-x-80 w-40 h-40" />
               <Image src={f6} alt='f6' className="z-20 transform translate-y-32 translate-x-14 w-40 h-40" />
-              <Image src={f3} alt='f3' className="z-40 transform -translate-y-40 translate-x-48 w-40 h-40" />
+              <Image src={f3} alt='f3' className="z-40 transform -translate-y-40 translate-x-48 w-40 h-40" /> */}
+              <Image src={pic5} alt='Our Facilities' />
           </div>
         </div>
       </div>

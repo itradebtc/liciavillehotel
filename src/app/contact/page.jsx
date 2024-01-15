@@ -36,7 +36,7 @@ export default function Page() {
                     alt='contactus' 
                     width="500" 
                     height="500" 
-                    className='md:rounded-r-[200px] w-80 md:w-[1131px]' 
+                    className='md:rounded-r-[200px] w-80 md:w-[1131px] bg-contain' 
                 />
                 <motion.img 
                     initial={{x: -100, y: 0, opacity: 0 }}
