@@ -13,7 +13,7 @@ export default function Footer() {
             <div className=''>
                 <div className='md:space-y-1 text-white'>
                     <p className='text-[12px] md:text-lg hover:text-yellow-600'><a href={`tel:${'08140815172'}`}>0814 081 5172</a></p>
-                    <p className='text-[12px] md:text-[14px] hover:text-yellow-600'><a href={`mailto:${'liciavillehotelagbor@gmail.com'}`}>liciavillehotelagbor@gmail.com</a></p>
+                    <p className='text-[12px] md:text-[14px] hover:text-yellow-600'><a href={`mailto:${'info@liciavillehotel.com.ng'}`}>info@liciavillehotel.com.ng</a></p>
                     <p className='text-[12px] md:text-[14px] hover:text-yellow-600'>1 Urubusi street, Agbor, Delta State</p>
                 </div>
             </div>

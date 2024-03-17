@@ -17,7 +17,7 @@ export default function Page() {
     const sendmail = (e) => {
       e.preventDefault();
   
-      emailjs.sendForm("service_k27d4yt","template_yvzib0m",form.current,"1WZjNaK7QEHAfsI_P")
+      emailjs.sendForm("service_8r3dkzn","template_yvzib0m",form.current,"1WZjNaK7QEHAfsI_P")
       .then(()=>{
         toast.success("message sent")
       },()=>{
@@ -102,7 +102,7 @@ export default function Page() {
                             </div>
                             <div className='flex items-center space-x-4 text-[12px] md:text-[14px]'>
                                 <a href={`mailto:${'liciavillehotelagbor@gmail.com'}`}><MdEmail size={20} className='text-yellow-600 hover:text-slate-300'/></a>
-                                <a href={`mailto:${'liciavillehotelagbor@gmail.com'}`} >liciavillehotelagbor@gmail.com</a>
+                                <a href={`mailto:${'info@liciavillehotel.com.ng'}`} >info@liciavillehotel.com.ng</a>
                             </div>
                         </div>
                         <div className='pt-7 space-y-3'>

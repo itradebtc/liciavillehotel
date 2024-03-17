@@ -24,8 +24,8 @@ export const NavBar = () => {
                     <a href={`tel:${'(08140815172'}`} className='hidden md:flex'>0814 081 5172</a>
                 </div>
                 <div className='flex space-x-2 justify-between items-center'>
-                    <a href={`mailto:${'liciavillehotel@gmail.com'}`}><MdEmail size={20} className='text-yellow-600'/></a>
-                    <a href={`mailto:${'liciavillehotelagbor@gmail.com'}`} className='hidden md:flex'>liciavillehotelagbor@gmail.com</a>
+                    <a href={`mailto:${'info@liciavillehotel.com.ng'}`}><MdEmail size={20} className='text-yellow-600'/></a>
+                    <a href={`mailto:${'info@liciavillehotel.com.ng'}`} className='hidden md:flex'>info@liciavillehotel.com.ng</a>
                 </div>
             </div>
             

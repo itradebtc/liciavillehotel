@@ -99,7 +99,7 @@ export default function page() {
         <p>
             Liciaville Hotel <br />
             Address: 1 Urubusi street, 321103, Agbor, Delta <br />
-            Email: liciavillehotel@gmail.com <br />
+            Email: info@liciavillehotel.com.ng <br />
             Phone: 0814 081 5172 <br />
         </p><br />
     </section>

@@ -29,21 +29,6 @@ weight:['400']
 })
 
 export default function Home() {
-  const form = useRef();
-
-    const sendmail = (e) => {
-      e.preventDefault();
-  
-      emailjs.sendForm("service_k27d4yt","template_yvzib0m",form.current,"1WZjNaK7QEHAfsI_P")
-      .then(()=>{
-        toast.success("Reservation Booked")
-      },()=>{
-        toast.error("something is wrong")
-      })
-      e.target.reset()
-
-  };
-
   return (
     <main className='w-screen'>
         <div className={`${styles.welcome} ${mod.className} text-white md:text-6xl text-center py-32 md:py-64 md:space-y-2`}>
@@ -74,36 +59,36 @@ export default function Home() {
             exist={{ opacity: 0, y: 0 }}
             transition={{ delay: 1, duration: 1 }}
             >
-              <h2>Top Hotel In The City Of Agbor, Delta State</h2>
+              <h2>And Comfort In The City Of Agbor, Delta State</h2>
             </motion.div>
         </AnimatePresence>
         </div>
     
 
       {/* book now */}
-      <form ref={form} onSubmit={sendmail} className='flex flex-wrap justify-evenly md:flex md:justify-around md:items-center md:border md:rounded-xl md:w-[1131px] h-[296px] md:h-[150px] md:relative md:bottom-14 bg-slate-50 md:ml-36 px-5 py-3 gap-2'>
+      <form className='flex flex-wrap justify-evenly md:flex md:justify-around md:items-center md:border md:rounded-xl md:w-[1131px] h-[296px] md:h-[150px] md:relative md:bottom-14 bg-slate-50 md:ml-36 px-5 py-3 gap-2'>
         <div className=''>
           <label className='grid text-sm md:text-lg'>
             Check In
-            <input type="date" className='border py-2 px-6 text-slate-500 text-sm outline-none rounded-md' onChange={(e) => setName(e.target.value)}/>
+            <input type="date" className='border py-2 px-6 text-slate-500 text-sm outline-none rounded-md' />
           </label>
         </div>
         <div>
           <label className='grid text-sm md:text-lg'>
               Check Out
-              <input type="date" className='border py-2 px-6 text-slate-500 text-sm outline-none rounded-md' onChange={(e) => setName(e.target.value)}/>
+              <input type="date" className='border py-2 px-6 text-slate-500 text-sm outline-none rounded-md' />
           </label>
         </div>
         <div>
           <label className='grid text-sm md:text-lg'>
             Rooms
-            <input type="number" placeholder="Rooms" name='room' min={1} className='border py-2 px-6 text-slate-500 text-sm outline-none rounded-md' onChange={(e) => setRooms(e.target.value)} required />
+            <input type="number" placeholder="Rooms" name='room' min={1} className='border py-2 px-6 text-slate-500 text-sm outline-none rounded-md'  required />
           </label>
         </div>
         <div className='px-3 md:px-0'>
           <label className='grid text-sm md:text-lg'>
             Adults
-            <input type="number" placeholder="Adults" name='adults' min={1} className='border py-2 px-6 text-slate-500 text-sm outline-none rounded-md' onChange={(e) => setAdults(e.target.value)} required />
+            <input type="number" placeholder="Adults" name='adults' min={1} className='border py-2 px-6 text-slate-500 text-sm outline-none rounded-md' required />
           </label>
         </div>
         <div className='md:pt-[29px] md:flex col-span-3'>
@@ -198,9 +183,9 @@ export default function Home() {
           <h2 className='text-center text-5xl py-4 uppercase'>Our Facilities</h2>
           <p className='text-center border-t-4 border-yellow-600 md:mx-[500px] py-7'></p>
         </div>
-        <div className='md:flex'>
-          <div>
-            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatem, in omnis qui laudantium sed quasi cum modi atque eum reiciendis dolor sunt beatae, quibusdam aliquid? Harum magni in neque qui!</p>
+        <div className='md:flex md:justify-evenly gap-7'>
+          <div className='w-3/5'>
+            <p>Welcome to Liciaville Hotel, where luxury meets comfort in the heart of paradise. At Liciaville Hotel, we pride ourselves on our commitment to excellence, offering  a perfect blend of elegant accommodations, state-of-the-art amenities, and impeccable service. From the serene beauty of our rooms to the pristine conditions  of our leisure facilities, every detail is designed with your utmost comfort and satisfaction in mind.</p>
           </div>
           <div className="hidden md:flex-col md:flex md:h-96 md:w-screen md:float-right">
               <Image src={f1} alt='f1' className="z-40 md:absolute md:transform md:-translate-y-44 md:translate-x-44 md:w-56 md:h-56" />
