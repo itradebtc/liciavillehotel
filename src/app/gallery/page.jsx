@@ -6,11 +6,7 @@ const images = [
     'https://github.com/itradebtc/liciaimages/blob/main/licia1.JPG?raw=true',
     'https://github.com/itradebtc/liciaimages/blob/main/licia10.JPG?raw=true',
     'https://github.com/itradebtc/liciaimages/blob/main/licia11.png?raw=true',
-    'https://github.com/itradebtc/liciaimages/blob/main/licia12.png?raw=true',
-    'https://github.com/itradebtc/liciaimages/blob/main/licia13.png?raw=true',
-    'https://github.com/itradebtc/liciaimages/blob/main/licia14.png?raw=true',
     'https://github.com/itradebtc/liciaimages/blob/main/licia15.png?raw=true',
-    // 'https://github.com/itradebtc/liciaimages/blob/main/licia16.PNG?raw=true',
     'https://github.com/itradebtc/liciaimages/blob/main/licia17.jpg?raw=true',
     'https://github.com/itradebtc/liciaimages/blob/main/licia18.jpg?raw=true',
     'https://github.com/itradebtc/liciaimages/blob/main/licia19.jpg?raw=true',
@@ -21,17 +17,12 @@ const images = [
     'https://github.com/itradebtc/liciaimages/blob/main/licia24.png?raw=true',
     'https://github.com/itradebtc/liciaimages/blob/main/licia26.png?raw=true',
     'https://github.com/itradebtc/liciaimages/blob/main/licia27.png?raw=true',
-    'https://github.com/itradebtc/liciaimages/blob/main/licia28.png?raw=true',
-    'https://github.com/itradebtc/liciaimages/blob/main/licia29.png?raw=true',
     'https://github.com/itradebtc/liciaimages/blob/main/licia3.JPG?raw=true',
-    'https://github.com/itradebtc/liciaimages/blob/main/licia30.png?raw=true',
     'https://github.com/itradebtc/liciaimages/blob/main/licia31.JPG?raw=true',
     'https://github.com/itradebtc/liciaimages/blob/main/licia4.JPG?raw=true',
-    'https://github.com/itradebtc/liciaimages/blob/main/licia5.JPG?raw=true',
     'https://github.com/itradebtc/liciaimages/blob/main/licia6.JPG?raw=true',
     'https://github.com/itradebtc/liciaimages/blob/main/licia7.jpg?raw=true',
     'https://github.com/itradebtc/liciaimages/blob/main/licia8.JPG?raw=true',
-    'https://github.com/itradebtc/liciaimages/blob/main/licia9.png?raw=true',
   
   // Add more image paths here
 ];
@@ -66,7 +57,7 @@ export default function Page() {
         </div>
 
         {selectedImage && (
-          <div className={styles.modalOverlay} onClick={handleCloseModal}>
+          <div className={`${styles.modalOverlay} onClick={handleCloseModal} z-50`} >
             <section className={styles.modal}>
               <span className={styles.close} onClick={handleCloseModal}>
                 &times;

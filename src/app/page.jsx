@@ -18,8 +18,7 @@ import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
 import "swiper/css/effect-flip";
-import { motion, visualElementStore, AnimatePresence } from 'framer-motion'
-import emailjs from '@emailjs/browser'
+import { motion, AnimatePresence } from 'framer-motion'
 import { ToastContainer, toast } from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css'
 import Link from 'next/link'
@@ -194,9 +193,6 @@ export default function Home() {
               <Image src={mainswipe2} alt='ms2' className="z-20 md:absolute md:transform md:translate-y-5 md:translate-x-72 md:w-56 md:h-56" />
           </div>
           <div className="md:hidden flex flex-col md:h-96 md:w-screen md:float-right">
-              {/* <Image src={f1} alt='f1' className="z-50 transform translate-y-8 translate-x-80 w-40 h-40" />
-              <Image src={f6} alt='f6' className="z-20 transform translate-y-32 translate-x-14 w-40 h-40" />
-              <Image src={f3} alt='f3' className="z-40 transform -translate-y-40 translate-x-48 w-40 h-40" /> */}
               <Image src={pic5} alt='Our Facilities' />
           </div>
         </div>

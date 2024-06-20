@@ -5,6 +5,7 @@ import {GiHamburgerMenu} from 'react-icons/gi'
 import { BsFillTelephoneFill } from 'react-icons/bs'
 import { MdEmail, MdOutlineClose } from 'react-icons/md'
 import { FaFacebookF, FaTwitter, FaInstagramSquare, FaLongArrowAltRight } from 'react-icons/fa'
+import {FaXTwitter} from 'react-icons/fa6';
 import Link from 'next/link'
 import Image from 'next/image'
 import logo from '../images/navheader.svg'
@@ -40,7 +41,7 @@ export const NavBar = () => {
                     target='_blank' 
                     rel='noreferrer' 
                     title='liciavillehotels'>
-                    <FaTwitter size={20} className='hover:text-slate-50 hover:scale-110'/>
+                    <FaXTwitter size={20} className='hover:text-slate-50 hover:scale-110'/>
                 </a>
                 <a href="https://instagram.com/liciavillehotels?igshid=OGIzYTJhMTRmYQ==" 
                     target='_blank' 
@@ -59,24 +60,22 @@ export const NavBar = () => {
             />
             <div className='hidden sm:flex'>
                 <ul className='hidden sm:flex justify-center items-center text-slate-600'>
-                    <Link href='./'>
+                    {/* <Link href='./'>
                         <li className='ml-10 uppercase hover:ease-in duration-300 hover:scale-110 hover:text-yellow-600 text-lg'>Home</li>  
-                    </Link>
-                    {/* <li className='ml-10 uppercase hover:ease-in duration-300 hover:scale-110 hover:text-yellow-600 text-lg'>Rooms</li> */}
+                    </Link> */}
                     <Link href=''>
-                        <li className='ml-10 uppercase hover:ease-in duration-300 hover:scale-110 
-                        hover:text-yellow-600 text-lg'>
+                        <li>
                             <Dropdown />
                         </li>
                     </Link>
-                    <Link href='./gallery'>
+                    {/* <Link href='./gallery'>
                         <li className='ml-10 uppercase hover:ease-in duration-300 hover:scale-110 hover:text-yellow-600 text-lg'>Gallery</li>
                     </Link>
                     <Link href='./contact'>
                         <li className='ml-10 uppercase hover:ease-in duration-300 hover:scale-110 hover:text-yellow-600 text-lg'>
                                 Contact
                         </li>
-                    </Link>
+                    </Link> */}
                 </ul>
                 <Link href='./booknow'>
                     <button className='ml-10 py-2 px-7 text-slate-50 uppercase shadow-2xl shadow-slate-700 hover:shadow-none hover:ease-in duration-300 hover:bg-yellow-500 text-lg flex justify-center items-center gap-4 bg-yellow-600'>Book Now <FaLongArrowAltRight /> </button>

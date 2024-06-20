@@ -3,6 +3,7 @@ import Image from 'next/image'
 import { useState, useRef } from 'react'
 import contactpic2 from '../images/contactpic2.png'
 import { FaFacebookF, FaTwitter, FaInstagramSquare } from 'react-icons/fa'
+import {FaXTwitter} from 'react-icons/fa6';
 import { BsFillTelephoneFill } from 'react-icons/bs'
 import { MdEmail, MdLocationPin } from 'react-icons/md'
 import { PageWrapper } from '../page-wrapper'
@@ -12,12 +13,15 @@ import 'react-toastify/dist/ReactToastify.css'
 import { motion } from 'framer-motion'
 
 export default function Page() {
+    const [name, setName] = useState('');
+    const [email, setEmail] = useState('');
+    
     const form = useRef();
 
     const sendmail = (e) => {
       e.preventDefault();
   
-      emailjs.sendForm("service_8r3dkzn","template_yvzib0m",form.current,"1WZjNaK7QEHAfsI_P")
+      emailjs.sendForm("service_8r3dkzn","template_fv6p1jp",form.current,"1WZjNaK7QEHAfsI_P")
       .then(()=>{
         toast.success("message sent")
       },()=>{
@@ -32,7 +36,7 @@ export default function Page() {
         <div className='grid md:flex md:gap-10 py-8'>
             <div className='overflow-hidden md:relative'>
                 <Image 
-                    src={contactpic2} 
+                    src={contactpic2}
                     alt='contactus' 
                     width="500" 
                     height="500" 
@@ -41,7 +45,7 @@ export default function Page() {
                 <motion.img 
                     initial={{x: -100, y: 0, opacity: 0 }}
                     animate={{x: 0, y: 0, opacity: 1 }}
-                    transition={{duration: 1, delay: 2.5, type: "tween" }}
+                    transition={{duration: 2, delay: 2.5, type: "tween" }}
                     className='md:rounded-r-[200px] w-full md:w-[1131px] h-[500px] hidden md:flex absolute inset-0' 
                     src='https://github.com/itradebtc/liciaimages/blob/main/contactus2.jpg?raw=true'
                     alt='contactus' 
@@ -52,20 +56,20 @@ export default function Page() {
             <div className='md:space-y-4 w-80 md:w-fit text-[12px] md:text-[14px]'>
                 <h2 className='text-2xl pt-3 md:pt-0'>Contact Us</h2>
                 <p>You have a question? We might just have answers. Send us a message to book an appointment</p>
-                <form id='form' className='space-y-4' ref={form} onSubmit={sendmail}>
+                <form id='form' className='space-y-4' ref={form} onSubmit={sendmail} >
                     <div className='flex flex-col'>
                       <label className='py-2'>Name</label>
-                      <input type="text" placeholder="Enter your Name"  name="name" className="border-b-2 border-gray-25 outline-none" onChange={(event) => setName(event.target.value)} required />
+                      <input type="text" placeholder="Enter your Name"  name="name" className="border-b-2 border-gray-25 outline-none" onChange={(e) => setName(e.target.value)} required />
                     </div>
                     <div className='flex flex-col'>
                       <label className='py-2'>Email</label>
-                      <input type="email" placeholder="Enter a valid email address"  className="border-b-2 border-gray-25 outline-none" onChange={(event) => setEmail(event.target.value)} required />
+                      <input type="email" placeholder="Enter a valid email address" name="email"  className="border-b-2 border-gray-25 outline-none" onChange={(e) => setEmail(e.target.value)} required />
                     </div>
                     <div className='flex flex-col u-form-group u-form-message mb-3'>
                       <label>Message</label>
-                      <textarea placeholder="Enter your question/comment here" rows="4" cols="50" className="border-b-2 border-gray-25 outline-none h-[123px] pt-2" required ></textarea>
+                      <textarea name='message' placeholder="Enter your question/comment here" rows="4" cols="50" className="border-b-2 border-gray-25 outline-none h-[123px] pt-2" required ></textarea>
                     </div>
-                    <button className='py-3 px-7 rounded-lg w-full md:w-full text-slate-50 uppercase hover:bg-slate-300 hover:text-yellow-600 hover:text-xl text-lg flex justify-center items-center gap-4 bg-yellow-600'>Submit</button>
+                    <button className='py-3 px-7 rounded-lg w-full md:w-full text-slate-50 uppercase hover:shadow-none hover:ease-in duration-300 hover:bg-yellow-500 hover:text-xl text-lg flex justify-center items-center gap-4 bg-yellow-600'>Submit</button>
                 </form>
                 <ToastContainer
                 position='top-center'
@@ -118,8 +122,8 @@ export default function Page() {
                                     </a> 
                                 </li>
                                 <li className='hover:scale-110 hover:ease-in duration-300 hover:text-slate-300'>
-                                    <a href="https://www.twitter.com" target='_blank' rel='noreferrer' title='Our twitter handle'> 
-                                    <FaTwitter size={30} />
+                                    <a href="https://www.x.com" target='_blank' rel='noreferrer' title='Our twitter handle'> 
+                                    <FaXTwitter size={30} />
                                     </a>
                                 </li>
                                 <li className='hover:scale-110 hover:ease-in duration-300 hover:text-slate-300'>
