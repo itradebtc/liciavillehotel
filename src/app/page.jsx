@@ -22,6 +22,7 @@ import { motion, AnimatePresence } from 'framer-motion'
 import { ToastContainer, toast } from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css'
 import Link from 'next/link'
+import ReviewsCarousel from './component/ReviewsCarousel'
 
 const mod = Modak({ subsets:['latin'],
 weight:['400']
@@ -178,19 +179,19 @@ export default function Home() {
       
         {/* Our facilities */}
       <div className='md:py-14 md:px-20'>
-        <div className='md:pb-36'>
+        <div className='md:pb-8'>
           <h2 className='text-center text-5xl py-4 uppercase'>Our Facilities</h2>
-          <p className='text-center border-t-4 border-yellow-600 md:mx-[500px] py-7'></p>
+          <p className='text-center border-t-4 border-yellow-600 md:mx-[500px] py-4'></p>
         </div>
-        <div className='md:flex md:justify-evenly gap-7'>
+        <div className='md:flex md:justify-evenly gap-10'>
           <div className='w-3/5'>
-            <p>Welcome to Liciaville Hotel, where luxury meets comfort in the heart of paradise. At Liciaville Hotel, we pride ourselves on our commitment to excellence, offering  a perfect blend of elegant accommodations, state-of-the-art amenities, and impeccable service. From the serene beauty of our rooms to the pristine conditions  of our leisure facilities, every detail is designed with your utmost comfort and satisfaction in mind.</p>
+            <p className='text-2xl'>Welcome to Liciaville Hotel, where luxury meets comfort in the heart of paradise. At Liciaville Hotel, we pride ourselves on our commitment to excellence, offering  a perfect blend of elegant accommodations, state-of-the-art amenities, and impeccable service. From the serene beauty of our rooms to the pristine conditions  of our leisure facilities, every detail is designed with your utmost comfort and satisfaction in mind.</p>
           </div>
-          <div className="hidden md:flex-col md:flex md:h-96 md:w-screen md:float-right">
-              <Image src={f1} alt='f1' className="z-40 md:absolute md:transform md:-translate-y-44 md:translate-x-44 md:w-56 md:h-56" />
-              <Image src={f6} alt='f6' className="z-20 md:absolute md:transform md:translate-y-44 md:translate-x-44 md:w-56 md:h-56" />
-              <Image src={f3} alt='f3' className="z-40 md:absolute md:transform md:w-56 md:h-56" />
-              <Image src={mainswipe2} alt='ms2' className="z-20 md:absolute md:transform md:translate-y-5 md:translate-x-72 md:w-56 md:h-56" />
+          <div className="hidden md:grid md:grid-cols-2 md:gap-1 md:h-96 md:w-screen md:float-right">
+              <Image src={f1} alt='f1' className="md:h-52 rounded-br-md rounded-tl-md" />
+              <Image src={f6} alt='f6' className="md:h-52 rounded-tl-md rounded-br-md" />
+              <Image src={mainswipe2} alt='ms2' className="md:h-52 rounded-br-md rounded-tl-md" />
+              <Image src={f3} alt='f3' className="md:h-52 rounded-tl-md rounded-br-md" />
           </div>
           <div className="md:hidden flex flex-col md:h-96 md:w-screen md:float-right">
               <Image src={pic5} alt='Our Facilities' />
@@ -198,10 +199,17 @@ export default function Home() {
         </div>
       </div>
 
-
-       
-      <div>
+      {/* Testimonial */}
+      <div className='md:py-14 md:px-20'>
+        <div className='md:pb-2'>
+          <h2 className='text-center text-5xl py-4 uppercase'>Guest Reviews</h2>
+          <p className='text-center border-t-4 border-yellow-600 md:mx-[500px] py-4'></p>
+        </div>
+        <div>
+        <ReviewsCarousel />
+        </div>
       </div>
+       
     </main>
   )
 }
