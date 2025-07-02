@@ -6,17 +6,17 @@ const reviews = [
   {
     id: 1,
     text: 'Amazing experience! The rooms were clean and the service was top-notch.',
-    name: 'John Doe',
+    name: 'Emeka Okechukwu',
   },
   {
     id: 2,
     text: 'Beautiful location and excellent amenities. Highly recommended!',
-    name: 'Jane Smith',
+    name: 'Hillary Ajuebon',
   },
   {
     id: 3,
     text: 'Had a wonderful stay. The staff was very friendly and helpful.',
-    name: 'Michael Brown',
+    name: 'Onyekachi Nwosu',
   },
 ];
 
